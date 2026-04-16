@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>AI Image Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h1 class="header__title">AI Image Generator</h1>
+        </div>
+        <div class="theme">
+          <button type="button" class="theme__btn">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </header>
+      <div class="main">
+        <form action="#" class="prompt-form">
+          <div class="prompt__wrapper">
+            <textarea
+              name=""
+              id=""
+              class="prompt__textarea"
+              placeholder="Describe your image"
+              required
+              autofocus
+            ></textarea>
+            <button type="button" class="prompt__generate-btn">
+              <i class="fa-solid fa-shuffle"></i>
+            </button>
+          </div>
+          <div class="prompt__actions">
+            <div class="actions__wrapper">
+              <div class="select__wrapper">
+                <select class="custom-select" required id="model">
+                  <option value="" selected disabled>Select AI Model</option>
+                  <option value="black-forest-labs/FLUX.1-schnell">
+                    FLUX.1-schnell
+                  </option>
+                  <option
+                    value="runwayml/stable-diffusion-v1-5"
+                    disabled
+                    title="Model not supported by provider hf-inference"
+                  >
+                    Stable Diffusion v1.5
+                  </option>
+                  <option
+                    value="prompthero/openjourney"
+                    disabled
+                    title="Model not supported by provider hf-inference"
+                  >
+                    OpenJourney
+                  </option>
+                </select>
+              </div>
+              <div class="select__wrapper">
+                <select class="custom-select" required id="image-count">
+                  <option value="" selected disabled>Image Count</option>
+                  <option value="1">1 Image</option>
+                  <option value="2">2 Images</option>
+                  <option value="3">3 Images</option>
+                  <option value="4">4 Images</option>
+                </select>
+              </div>
+              <div class="select__wrapper">
+                <select class="custom-select" required id="aspect-ratio">
+                  <option value="" selected disabled>Aspect Ratio</option>
+                  <option value="1/1">Square (1:1)</option>
+                  <option value="16/9">Landscape (16:9)</option>
+                  <option value="9/16">Portrait (9:16)</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="generate-btn">
+              <i class="fa-solid fa-wand-sparkles"></i>
+              Generate
+            </button>
+          </div>
+        </form>
+        <div class="gallery">
+          <!-- <div class="gallery__card error">
+            <div class="error-card">
+              <i class="fa-solid fa-triangle-exclamation triangle"></i>
+              <p class="status-text">Something wrong</p>
+            </div>
+          </div> -->
+          <!-- <div class="gallery__card loading">
+            <img src="./img/test.png" class="gallery__img" />
+            <div class="gallery__card-overlay">
+              <button class="gallery__download-btn">
+                <i class="fa-solid fa-download"></i>
+              </button>
+            </div>
+            <div class="loading-card">
+              <div class="spiner"></div>
+              <p class="loading-text">Generating</p>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img src="./img/test.png" class="gallery__img" />
+            <div class="gallery__card-overlay">
+              <button class="gallery__download-btn">
+                <i class="fa-solid fa-download"></i>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img src="./img/test.png" class="gallery__img" />
+            <div class="gallery__card-overlay">
+              <button class="gallery__download-btn">
+                <i class="fa-solid fa-download"></i>
+              </button>
+            </div>
+          </div>
+          <div class="gallery__card">
+            <img src="./img/test.png" class="gallery__img" />
+            <div class="gallery__card-overlay">
+              <button class="gallery__download-btn">
+                <i class="fa-solid fa-download"></i>
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <script src="./main.js" defer></script>
+  </body>
+</html>
+
+<!-- -->
