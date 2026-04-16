@@ -15,7 +15,7 @@ const MODEL_URL =
 
 app.post("/generate", async (req, res) => {
   try {
-    const { prompt, width, height } = req.body;
+    const { prompt, width = 512, height = 512 } = req.body;
 
     const response = await fetch(MODEL_URL, {
       method: "POST",
@@ -47,7 +47,8 @@ app.post("/generate", async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
