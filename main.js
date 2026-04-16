@@ -79,7 +79,7 @@ function updateImageCards(imgIndex, imgUrl) {
 }
 
 async function generateImages(model, imageCount, aspectRatio, promptText) {
-  const serverUrl = "https://text-to-image-api-3l0l.onrender.com";
+  const serverUrl = "https://text-to-image-api-3l0l.onrender.com/generate";
   const { width, height } = getImageSize(aspectRatio);
   generateBtn.setAttribute("disabled", "true");
 
