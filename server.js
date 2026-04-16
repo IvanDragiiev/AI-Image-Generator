@@ -9,7 +9,7 @@ app.use(express.json());
 
 const API_KEY = process.env.API_KEY;
 const API_KEY2 = process.env.API_KEY2;
-
+console.log("API KEY:", process.env.API_KEY);
 const MODEL_URL =
   "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell";
 
